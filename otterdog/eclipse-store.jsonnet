@@ -75,5 +75,18 @@ orgs.newOrg('eclipse-store') {
         actions_can_approve_pull_request_reviews: false,
       },
     },
+    orgs.newRepo('bookstore-demo') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "EclipseStore BookStore Demo - Sample Application",
+      has_discussions: true,
+      homepage: "https://eclipsestore.io/",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
+    },
   ],
 }
