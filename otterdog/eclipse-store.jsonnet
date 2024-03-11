@@ -26,6 +26,16 @@ orgs.newOrg('eclipse-store') {
     },
   ],
   _repositories+:: [
+    orgs.newRepo('bookstore-demo') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "EclipseStore BookStore Demo - Sample Application",
+      has_discussions: true,
+      homepage: "https://eclipsestore.io/",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('docs-site') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -35,9 +45,6 @@ orgs.newOrg('eclipse-store') {
       gh_pages_source_branch: "site",
       gh_pages_source_path: "/",
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -64,22 +71,6 @@ orgs.newOrg('eclipse-store') {
         "storage-engine"
       ],
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
-    },
-    orgs.newRepo('bookstore-demo') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
-      description: "EclipseStore BookStore Demo - Sample Application",
-      has_discussions: true,
-      homepage: "https://eclipsestore.io/",
-      secret_scanning_push_protection: "disabled",
-      web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
     },
   ],
 }
