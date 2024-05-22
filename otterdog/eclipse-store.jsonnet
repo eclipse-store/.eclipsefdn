@@ -32,7 +32,6 @@ orgs.newOrg('eclipse-store') {
       description: "EclipseStore BookStore Demo - Sample Application",
       has_discussions: true,
       homepage: "https://eclipsestore.io/",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('docs-site') {
@@ -60,7 +59,6 @@ orgs.newOrg('eclipse-store') {
       description: "High-Performance Java-Native-Persistence. Store and load any Java Object Graph or Subgraphs partially, Relieved of Heavy-weight JPA. Microsecond Response Time. Ultra-High Throughput. Minimum of Latencies. Create Ultra-Fast In-Memory Database Applications & Microservices.",
       has_discussions: true,
       homepage: "https://eclipsestore.io/",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "in-memory-database",
         "in-memory-storage",
