@@ -11,16 +11,16 @@ orgs.newOrg('eclipse-store') {
   },
   secrets+: [
     orgs.newOrgSecret('ORG_GPG_PASSPHRASE') {
-      value: "********",
+      value: "pass:bots/technology.store/gpg/passphrase",
     },
     orgs.newOrgSecret('ORG_GPG_PRIVATE_KEY') {
-      value: "********",
+      value: "pass:bots/technology.store/gpg/secret-subkeys.asc",
     },
     orgs.newOrgSecret('ORG_OSSRH_PASSWORD') {
-      value: "********",
+      value: "pass:bots/technology.store/oss.sonatype.org/gh-token-password",
     },
     orgs.newOrgSecret('ORG_OSSRH_USERNAME') {
-      value: "********",
+      value: "pass:bots/technology.store/oss.sonatype.org/gh-token-username",
     },
   ],
   _repositories+:: [
