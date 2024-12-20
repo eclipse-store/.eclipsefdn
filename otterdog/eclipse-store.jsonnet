@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-store') {
+orgs.newOrg('technology.store', 'eclipse-store') {
   settings+: {
     description: "",
     name: "Eclipse Store",
