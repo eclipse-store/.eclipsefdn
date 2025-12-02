@@ -58,6 +58,13 @@ orgs.newOrg('technology.store', 'eclipse-store') {
       description: "High-Performance Java-Native-Persistence. Store and load any Java Object Graph or Subgraphs partially, Relieved of Heavy-weight JPA. Microsecond Response Time. Ultra-High Throughput. Minimum of Latencies. Create Ultra-Fast In-Memory Database Applications & Microservices.",
       has_discussions: true,
       homepage: "https://eclipsestore.io/",
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          requires_pull_request: true,
+          requires_commit_signatures: true,
+          required_approving_review_count: 1
+        },
+      ],
       topics+: [
         "in-memory-database",
         "in-memory-storage",
